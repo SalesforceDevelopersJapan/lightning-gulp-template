@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+	<aura:attribute name="jqueryVersion" type="String"/>
+	<aura:attribute name="lodashVersion" type="String"/>
+    <ltng:require scripts="/resource/HereIsYourComponentName" afterScriptsLoaded="{!c.doInit}"/>
+    <div>
+        <h2>This is Component from Template</h2>
+        Jquery Version : {!v.jqueryVersion}<br />
+        lodash Version : {!v.lodashVersion}
+    </div>
+</aura:component>

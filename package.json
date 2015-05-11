@@ -1,0 +1,28 @@
+{
+  "name": "YourLightningComponentName",
+  "version": "1.0.0",
+  "description": "Template for Lightning Component Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Your Name",
+  "license": "License of ThisComponent",
+  "dependencies": {
+    "jquery": "1.11.2"
+  },
+  "devDependencies": {
+    "jsforce": "^1.4.1",
+    "gulp": "^3.8.11",
+    "gulp-zip": "^3.0.2",
+    "through2": "^0.6.5",
+    "vinyl-source-stream": "^1.0.0",
+    "browserify": "^10.1.2",
+    "debowerify" : "^1.2.1"
+  },
+  "browserify": {
+      "transform": [
+          "debowerify"
+      ]
+  }
+}
