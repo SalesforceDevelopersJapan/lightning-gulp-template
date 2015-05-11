@@ -57,5 +57,5 @@ var componentName = 'HereIsYourComponentName'; -> var componentName = 'Ryusei';
 If you want to use auto deploy when files are changed,please type following command:
 
 ```
-SF_USERNAME=yourSalesforceUsername SF_PASSWORD=yourSalesforcePassword gulp
+SF_USERNAME=yourSalesforceUsername SF_PASSWORD=yourSalesforcePassword gulp watch
 ```
