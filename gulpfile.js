@@ -5,6 +5,7 @@ var zip = require("gulp-zip");
 var browserify = require("browserify");
 var debowerify = require('debowerify');
 var source = require("vinyl-source-stream");
+var deamd = require('deamd');
 var through2 = require("through2");
 var jsforce = require("jsforce");
 
@@ -35,7 +36,10 @@ gulp.task("build", function() {
     entries: ["./src/scripts/"+ componentName +".js"],
     standalone: componentName
   }).transform(debowerify)
-  .bundle().pipe(source(componentName + ".resource")).pipe(gulp.dest("pkg/staticresources/"));
+  .bundle()
+  .pipe(source(componentName + ".resource"))
+  .pipe(deamd())
+  .pipe(gulp.dest("pkg/staticresources/"));
 });
 
 gulp.task("deploy", function() {
